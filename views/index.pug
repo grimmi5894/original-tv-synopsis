@@ -13,5 +13,7 @@ html
         for actors in showdata.starring 
           li= actors
     h2 Seasons 
-      ul
-        a(href=`/seasons/${showdata.seasons.number}`)  
+      ul 
+        for season in showdata.seasons 
+          li 
+            a(href=`/season/${season.number}`)= `Season ${season.number}`
